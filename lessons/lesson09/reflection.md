@@ -18,6 +18,14 @@
 - 本研究不能回答：外部独立队列表现、临床部署价值、因果效应。
 - 后续可改进方向：引入外部验证队列，补充更多基线模型与超参数敏感性分析，记录不同随机种子下集成稳定性的分布。
 
+## 干净环境复现记录
+- 环境：隔离 Python 3.13 虚拟环境，按 `src/requirements.txt` 安装 numpy/pandas/scikit-learn/matplotlib/xlrd，未复用本机已有包；在仓库副本中运行，不改动定稿 `outputs/`。
+- 已跑通：`demo_ensemble.py --data wdbc`、`demo_ensemble.py --data ctg`、`ctg_analysis.py`、`plot_paper_figures.py`、`prepare_wdbc.py`，均正常退出并写出结果表/图。
+- 失败点与处理（已修复）：
+  - `ctg_analysis.py` 日志写死旧目录 `09_工作记录/`，在干净仓库中因目录不存在而 `FileNotFoundError`；已改为写入 `outputs/tables/ctg-analysis-output.log` 并自动建目录。
+  - `plot_paper_figures.py` 未显式指定后端，无图形界面环境会拉起 Tk 后端并因缺 Tcl 报错；已在导入 pyplot 前设置 `matplotlib.use("Agg")` 无头后端。
+- 复现差异说明：重跑得到的指标与定稿仅存在 GBDT 随机扰动及依赖版本（Python/sklearn）导致的浮点级差异，模型排序与结论一致；定稿结果表保留未覆盖。`prepare_ctg.py` 需要 UCI 原始压缩包放入 `data/ctg/raw/`，属可选重建步骤，仓库已提供固定离线划分。
+
 ## 同伴复现记录
 - 复现人 / 日期：____（待同伴回填）
 - 是否在另一台电脑跑通：____（待同伴回填）

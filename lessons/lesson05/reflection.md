@@ -17,6 +17,12 @@
 - 本研究不能回答的问题：不能宣称候选基因已被确认真实差异，也不能把校正阈值结论推广到其他数据集。
 - 后续可改进方向：在独立外部队列上复核候选基因；补充不同相关结构下 FDR 表现的敏感性分析。
 
+## 干净环境复现记录
+- 环境：隔离 Python 3.13 虚拟环境，按 `src/requirements.txt` 安装 numpy/pandas/scipy/matplotlib/nbclient/ipykernel，未复用本机已有包。
+- 方式：用 nbclient 从仓库目录顺序执行 `src/multiple-test-lab.ipynb` 全部 cell。
+- 结果：跑通无报错，生成 8 个结果表（模拟与真实数据）、2 张图与 `versions.json`；数据形状、样本量与校验断言均通过。
+- 失败点与处理：未出现阻塞性问题；notebook 通过向上查找 `data/leukemia.csv` 定位仓库，输出落到会话目录，不污染交付 `outputs/`。
+
 ## 同伴复现记录
 - 复现人 / 日期：____（待同伴回填）
 - 是否在另一台电脑跑通：____（待同伴回填）

@@ -322,7 +322,8 @@ def main():
         "Paired recording-cluster bootstrap differences:",
         pd.DataFrame(test_diffs).to_string(index=False),
     ]
-    log_path = BASE / "09_工作记录" / "ctg-analysis-output.log"
+    log_path = OUT / "ctg-analysis-output.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.write_text("\n\n".join(log_lines) + "\n", encoding="utf-8")
 
 
