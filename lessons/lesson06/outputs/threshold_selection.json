@@ -1,0 +1,18 @@
+{
+  "grid": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "protocol_source": "current student-worksheet.md and scripts/lab_utils.py",
+  "criterion": "sensitivity >= 0.90, then maximize specificity, then closest to 0.50, then smaller threshold",
+  "chosen_threshold": 0.5,
+  "eligible_count": 7,
+  "fixed_threshold_for_final_check": 0.5
+}

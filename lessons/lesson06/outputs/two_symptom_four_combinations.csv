@@ -1,0 +1,5 @@
+feature_1,feature_2,feature_1_value,feature_2_value,train_n,train_positive,validation_n,validation_positive,posterior_positive,predicted_class_at_0.5
+urine_pushing,micturition_pain,0,0,19,0,4,0,0.010088451615264393,0
+urine_pushing,micturition_pain,0,1,5,0,3,0,0.16887493826410946,0
+urine_pushing,micturition_pain,1,0,20,7,6,1,0.3958261721947942,0
+urine_pushing,micturition_pain,1,1,28,28,11,11,0.9288869109124398,1

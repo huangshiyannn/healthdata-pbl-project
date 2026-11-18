@@ -1,0 +1,140 @@
+{
+  "target": "bladder_inflammation",
+  "features": [
+    "fever_ge_38",
+    "nausea",
+    "lumbar_pain",
+    "urine_pushing",
+    "micturition_pain",
+    "burning_urethra"
+  ],
+  "alpha": 1.0,
+  "fixed_threshold": 0.5,
+  "queries": {
+    "Word_old_000110": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "current_000111": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  "query_posteriors": {
+    "Word_old_000110": 0.9774990075807142,
+    "current_000111": 0.9865759062601743
+  },
+  "threshold_selection": {
+    "grid": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "protocol_source": "current student-worksheet.md and scripts/lab_utils.py",
+    "criterion": "sensitivity >= 0.90, then maximize specificity, then closest to 0.50, then smaller threshold",
+    "chosen_threshold": 0.5,
+    "eligible_count": 7,
+    "fixed_threshold_for_final_check": 0.5
+  },
+  "metrics_train_validation": [
+    {
+      "dataset": "train",
+      "model": "Bernoulli NB",
+      "threshold": 0.5,
+      "n": 72,
+      "positive": 35,
+      "negative": 37,
+      "tn": 37,
+      "fp": 0,
+      "fn": 0,
+      "tp": 35,
+      "accuracy": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "brier": 0.016584080802948722,
+      "log_loss": 0.09884043265553948
+    },
+    {
+      "dataset": "validation",
+      "model": "Bernoulli NB",
+      "threshold": 0.5,
+      "n": 24,
+      "positive": 12,
+      "negative": 12,
+      "tn": 12,
+      "fp": 0,
+      "fn": 0,
+      "tp": 12,
+      "accuracy": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "brier": 0.011766036393776921,
+      "log_loss": 0.08721381083393166
+    },
+    {
+      "dataset": "train",
+      "model": "prior-only baseline",
+      "threshold": 0.5,
+      "n": 72,
+      "positive": 35,
+      "negative": 37,
+      "tn": 37,
+      "fp": 0,
+      "fn": 35,
+      "tp": 0,
+      "accuracy": 0.5138888888888888,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": NaN,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.4861111111111111,
+      "brier": 0.24980709876543208,
+      "log_loss": 0.692761328460975
+    },
+    {
+      "dataset": "validation",
+      "model": "prior-only baseline",
+      "threshold": 0.5,
+      "n": 24,
+      "positive": 12,
+      "negative": 12,
+      "tn": 12,
+      "fp": 0,
+      "fn": 12,
+      "tp": 0,
+      "accuracy": 0.5,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": NaN,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.5,
+      "brier": 0.2501929012345679,
+      "log_loss": 0.6935331319492363
+    }
+  ],
+  "frozen_before_locked_test_labels_read": true
+}

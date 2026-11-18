@@ -1,0 +1,295 @@
+{
+  "protocol": {
+    "target": "bladder_inflammation",
+    "features": [
+      "fever_ge_38",
+      "nausea",
+      "lumbar_pain",
+      "urine_pushing",
+      "micturition_pain",
+      "burning_urethra"
+    ],
+    "alpha": 1.0,
+    "fixed_threshold": 0.5,
+    "split_sizes": {
+      "train": 72,
+      "validation": 24,
+      "locked_test": 24
+    },
+    "threshold_selection_uses": "validation only"
+  },
+  "class_counts": {
+    "train": {
+      "positive": 35,
+      "negative": 37
+    },
+    "validation": {
+      "positive": 12,
+      "negative": 12
+    },
+    "locked_test": {
+      "positive": 12,
+      "negative": 12
+    }
+  },
+  "queries": {
+    "Word_old_000110": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "current_000111": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  },
+  "query_posteriors": {
+    "Word_old_000110": 0.9774990075807142,
+    "current_000111": 0.9865759062601743
+  },
+  "threshold_selection": {
+    "grid": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "protocol_source": "current student-worksheet.md and scripts/lab_utils.py",
+    "criterion": "sensitivity >= 0.90, then maximize specificity, then closest to 0.50, then smaller threshold",
+    "chosen_threshold": 0.5,
+    "eligible_count": 7,
+    "fixed_threshold_for_final_check": 0.5
+  },
+  "reliability_bins": [
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "reliability_validation": [
+    {
+      "bin": "[0, 0.2]",
+      "n": 12,
+      "positive": 0,
+      "mean_probability": 0.089002223632441,
+      "observed_fraction": 0.0,
+      "lower_edge": 0.0,
+      "upper_edge": 0.2,
+      "interval_convention": "[0, 0.2]"
+    },
+    {
+      "bin": "(0.2, 0.4]",
+      "n": 0,
+      "positive": 0,
+      "mean_probability": null,
+      "observed_fraction": null,
+      "lower_edge": 0.2,
+      "upper_edge": 0.4,
+      "interval_convention": "(0.2, 0.4]"
+    },
+    {
+      "bin": "(0.4, 0.6]",
+      "n": 0,
+      "positive": 0,
+      "mean_probability": null,
+      "observed_fraction": null,
+      "lower_edge": 0.4,
+      "upper_edge": 0.6,
+      "interval_convention": "(0.4, 0.6]"
+    },
+    {
+      "bin": "(0.6, 0.8]",
+      "n": 1,
+      "positive": 1,
+      "mean_probability": 0.6854290790262384,
+      "observed_fraction": 1.0,
+      "lower_edge": 0.6,
+      "upper_edge": 0.8,
+      "interval_convention": "(0.6, 0.8]"
+    },
+    {
+      "bin": "(0.8, 1.0]",
+      "n": 11,
+      "positive": 11,
+      "mean_probability": 0.9502794361664232,
+      "observed_fraction": 1.0,
+      "lower_edge": 0.8,
+      "upper_edge": 1.0,
+      "interval_convention": "(0.8, 1.0]"
+    }
+  ],
+  "duplicate_lumbar_validation_metrics": [
+    {
+      "dataset": "validation",
+      "model": "NB + 0 lumbar copies",
+      "threshold": 0.5,
+      "n": 24,
+      "positive": 12,
+      "negative": 12,
+      "tn": 12,
+      "fp": 0,
+      "fn": 0,
+      "tp": 12,
+      "accuracy": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "brier": 0.011766036393776921,
+      "log_loss": 0.08721381083393166,
+      "extra_copies": 0,
+      "mean_max_probability": 0.9196031747194834,
+      "max_abs_probability_change": 0.0,
+      "class_changes_from_base_at_0.5": 0
+    },
+    {
+      "dataset": "validation",
+      "model": "NB + 1 lumbar copies",
+      "threshold": 0.5,
+      "n": 24,
+      "positive": 12,
+      "negative": 12,
+      "tn": 12,
+      "fp": 0,
+      "fn": 0,
+      "tp": 12,
+      "accuracy": 1.0,
+      "sensitivity": 1.0,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "brier": 0.008387244211459003,
+      "log_loss": 0.07042546151290947,
+      "extra_copies": 1,
+      "mean_max_probability": 0.9342718934022298,
+      "max_abs_probability_change": 0.18304478277845593,
+      "class_changes_from_base_at_0.5": 0
+    },
+    {
+      "dataset": "validation",
+      "model": "NB + 5 lumbar copies",
+      "threshold": 0.5,
+      "n": 24,
+      "positive": 12,
+      "negative": 12,
+      "tn": 11,
+      "fp": 1,
+      "fn": 5,
+      "tp": 7,
+      "accuracy": 0.75,
+      "sensitivity": 0.5833333333333334,
+      "specificity": 0.9166666666666666,
+      "precision": 0.875,
+      "f1": 0.7,
+      "roc_auc": 0.9652777777777779,
+      "average_precision": 0.9658119658119658,
+      "brier": 0.15288844020694542,
+      "log_loss": 0.38537689804665937,
+      "extra_copies": 5,
+      "mean_max_probability": 0.9439391619257349,
+      "max_abs_probability_change": 0.7289993405545566,
+      "class_changes_from_base_at_0.5": 6
+    }
+  ],
+  "A094_lumbar_copies": [
+    {
+      "sample_id": "A094",
+      "bladder_inflammation": 1,
+      "lumbar_pain": 1,
+      "extra_copies": 0,
+      "base_probability": 0.8742622996475935,
+      "probability": 0.8742622996475935,
+      "probability_change": 0.0,
+      "base_prediction": 1,
+      "prediction_at_0.5": 1,
+      "class_changed": false
+    },
+    {
+      "sample_id": "A094",
+      "bladder_inflammation": 1,
+      "lumbar_pain": 1,
+      "extra_copies": 1,
+      "base_probability": 0.8742622996475935,
+      "probability": 0.7679721940982777,
+      "probability_change": -0.10629010554931584,
+      "base_prediction": 1,
+      "prediction_at_0.5": 1,
+      "class_changed": false
+    },
+    {
+      "sample_id": "A094",
+      "bladder_inflammation": 1,
+      "lumbar_pain": 1,
+      "extra_copies": 5,
+      "base_probability": 0.8742622996475935,
+      "probability": 0.14526295909303688,
+      "probability_change": -0.7289993405545566,
+      "base_prediction": 1,
+      "prediction_at_0.5": 0,
+      "class_changed": true
+    }
+  ],
+  "primary_protocol": "Current formal Markdown/Notebook; Word_old_000110 is a historical version comparison only.",
+  "two_symptom_validation": {
+    "dataset": "validation",
+    "model": "Two-symptom NB",
+    "threshold": 0.5,
+    "n": 24,
+    "positive": 12,
+    "negative": 12,
+    "tn": 12,
+    "fp": 0,
+    "fn": 1,
+    "tp": 11,
+    "accuracy": 0.9583333333333334,
+    "sensitivity": 0.9166666666666666,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "f1": 0.9565217391304348,
+    "roc_auc": 0.9826388888888888,
+    "average_precision": 0.9754901960784313,
+    "brier": 0.05375037228154714,
+    "log_loss": 0.202215899133937,
+    "features": [
+      "urine_pushing",
+      "micturition_pain"
+    ]
+  },
+  "test_provenance": {
+    "labels_available_in_supplied_workspace": true,
+    "source_material_author_previously_viewed_test_results": true,
+    "author_prior_test_access_source": "assets/pbl-machine-learning-basics-naive-bayes/packet-d3.csv; scripts/lesson7_analysis.py table D3",
+    "new_blind_evaluation": false,
+    "statement": "The source material states that its author viewed the test results in earlier exploration.  The supplied workspace also contains locked-test-labels.csv.  This reproduction uses a fixed post-selection check, not a newly blind test."
+  },
+  "source_sha256": {
+    "data\\student\\train.csv": "6105ca8752f374028bf6d0c94eb006c187616d125af27e46d1096eb9bc5c1935",
+    "data\\student\\validation.csv": "d29091f04a8a2230b8b2fd75b3e2eb25a33db0b5071e148028973526b2b820e1",
+    "data\\student\\locked-test-features.csv": "94ce3d6e3ece5b6d1fa1519be709dfcdfd2fdbb9eacc4282f9639939c6ec84f4",
+    "data\\teacher\\locked-test-labels.csv": "c4dfbbc229a1f947509755f91e8ac400da2ea0be0910eb8ad43a32b18e192f10"
+  },
+  "software": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.8.0"
+  }
+}

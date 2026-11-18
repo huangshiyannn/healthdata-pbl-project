@@ -1,0 +1,3 @@
+experiment,extra_copies,feature_copied,vector_count,max_abs_probability_change,mean_abs_probability_change,class_changes_at_0.5
+single copied nausea,1,nausea,64,0.221082487429704,0.06673295534213815,5
+five copied lumbar pain,5,lumbar_pain,64,0.8820311037395736,0.35053461400335356,23

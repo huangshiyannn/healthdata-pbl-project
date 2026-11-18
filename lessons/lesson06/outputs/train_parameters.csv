@@ -1,0 +1,15 @@
+parameter_type,class,feature,n_class,count_one,alpha,probability
+prior,0,(class prior),37,,,0.5138888888888888
+likelihood,0,fever_ge_38,37,25.0,1.0,0.6666666666666666
+likelihood,0,nausea,37,5.0,1.0,0.15384615384615385
+likelihood,0,lumbar_pain,37,30.0,1.0,0.7948717948717948
+likelihood,0,urine_pushing,37,13.0,1.0,0.358974358974359
+likelihood,0,micturition_pain,37,5.0,1.0,0.15384615384615385
+likelihood,0,burning_urethra,37,13.0,1.0,0.358974358974359
+prior,1,(class prior),35,,,0.4861111111111111
+likelihood,1,fever_ge_38,35,13.0,1.0,0.3783783783783784
+likelihood,1,nausea,35,13.0,1.0,0.3783783783783784
+likelihood,1,lumbar_pain,35,13.0,1.0,0.3783783783783784
+likelihood,1,urine_pushing,35,35.0,1.0,0.972972972972973
+likelihood,1,micturition_pain,35,28.0,1.0,0.7837837837837838
+likelihood,1,burning_urethra,35,17.0,1.0,0.4864864864864865

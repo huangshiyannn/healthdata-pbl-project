@@ -1,0 +1,4 @@
+sample_id,bladder_inflammation,lumbar_pain,extra_copies,base_probability,probability,probability_change,base_prediction,prediction_at_0.5,class_changed
+A094,1,1,0,0.8742622996475935,0.8742622996475935,0.0,1,1,False
+A094,1,1,1,0.8742622996475935,0.7679721940982777,-0.10629010554931584,1,1,False
+A094,1,1,5,0.8742622996475935,0.14526295909303688,-0.7289993405545566,1,0,True

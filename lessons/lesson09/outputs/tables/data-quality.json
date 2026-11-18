@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "dataset": "Cardiotocography (UCI id 193), sheet 'Raw Data' of CTG.xls",
+  "source": "https://archive.ics.uci.edu/dataset/193/cardiotocography",
+  "raw_zip_sha256_manifest": "ba2853564e282779907242b7bd8a83265d9fc4e79bb008573967daa16677bb6c",
+  "seed": 1010,
+  "expected_features": [
+    "LB",
+    "AC",
+    "FM",
+    "UC",
+    "DL",
+    "DS",
+    "DP",
+    "ASTV",
+    "MSTV",
+    "ALTV",
+    "MLTV",
+    "Width",
+    "Min",
+    "Max",
+    "Nmax",
+    "Nzeros",
+    "Mode",
+    "Mean",
+    "Median",
+    "Variance",
+    "Tendency"
+  ],
+  "feature_count": 21,
+  "missing_cells": 0,
+  "nonfinite_feature_values": 0,
+  "duplicate_sample_ids": 0,
+  "rows_removed": 0,
+  "partition_recording_overlaps": {
+    "train_validation": [],
+    "train_test": [],
+    "validation_test": []
+  },
+  "partitions": {
+    "train": {
+      "rows": 1279,
+      "recordings": 209,
+      "class_counts": {
+        "0": 1171,
+        "1": 108
+      }
+    },
+    "validation": {
+      "rows": 424,
+      "recordings": 73,
+      "class_counts": {
+        "0": 390,
+        "1": 34
+      }
+    },
+    "test": {
+      "rows": 423,
+      "recordings": 70,
+      "class_counts": {
+        "0": 389,
+        "1": 34
+      }
+    }
+  },
+  "limitations": [
+    "Segments from one recording may overlap and are not independent patients.",
+    "No external validation cohort is available."
+  ]
+}

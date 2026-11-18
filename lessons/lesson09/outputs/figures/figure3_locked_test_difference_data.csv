@@ -1,0 +1,5 @@
+contrast,metric,estimate,bootstrap_ci_low,bootstrap_ci_high,valid_replicates,bootstrap_replicates,contrast_zh,metric_zh
+random_forest_minus_logistic,pr_auc,0.1459747525846412,0.0240264330379468,0.56374182483253,2000,2000,随机森林 − 逻辑回归,PR-AUC
+random_forest_minus_logistic,roc_auc,0.038560411311054,0.0068856619224266,0.1793017031420482,2000,2000,随机森林 − 逻辑回归,ROC-AUC
+random_forest_minus_rbf_svm,pr_auc,0.0875966062054339,-0.0017489410386659,0.5579979491477299,2000,2000,随机森林 − RBF-SVM,PR-AUC
+random_forest_minus_rbf_svm,roc_auc,0.0188265537577498,-0.0002190989884432,0.105684622785156,2000,2000,随机森林 − RBF-SVM,ROC-AUC
