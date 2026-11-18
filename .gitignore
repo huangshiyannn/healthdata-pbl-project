@@ -1,0 +1,40 @@
+# ===== Python 环境与缓存 =====
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== 临时 / 草稿 / 中间产物（不纳入交付） =====
+.tmp/
+.tmp/**/
+*.tmp
+*.bak
+*_draft*
+*_old*
+*_v[0-9]*
+*.log
+
+# ===== 敏感信息 =====
+.env
+.env.*
+*.key
+*.pem
+secrets/
+config.local.*
+
+# ===== 系统 / 编辑器 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ===== 大体积原始数据（如需公开请保留脱敏小样例，并在 data/README.md 说明来源与获取方式） =====
+# 按需放开下面注释，仅忽略原始大文件、保留样例：
+# *.csv
+# !data/sample.csv
+# *.npz
+# *.zip
